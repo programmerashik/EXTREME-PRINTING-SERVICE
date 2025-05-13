@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extreme Printing Service - Print & Home Deliver</title>
+   <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    EXTREME<span> PRINTING </span> SERVICE
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Upload & Print</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#print-now" class="btn btn-secondary">Print Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Print from anywhere in Nicosia. Delivered to your door.</h1>
+                <p>Upload your files and we'll handle the rest. High quality printing with fast delivery across Nicosia.
+                </p>
+                <a href="#print-now" class="btn">Upload Your File</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="print-now" class="container">
+        <div class="print-form">
+            <h2>Upload & Print</h2>
+            <p>Fill in the details below to get started</p>
+
+            <form id="printingForm">
+                <div class="form-group">
+                    <label for="fileUpload">Your File</label>
+                    <div class="file-upload" id="fileUpload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop your file here, or <span style="color: var(--primary);">select file</span></p>
+                        <input type="file" id="actualFile" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="options-grid">
+                    <div class="form-group">
+                        <label for="paperSize">Paper Size</label>
+                        <select id="paperSize">
+                            <option value="a4">A4</option>
+                            <option value="a3">A3</option>
+                            <option value="photo">Photo Size</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printType">Print Type</label>
+                        <select id="printType">
+                            <option value="bw">Black & White - €0.10/page</option>
+                            <option value="color">Color - €0.25/page</option>
+                            <option value="photo">Photo - €0.50/page</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="copies">No. of Copies</label>
+                        <input type="number" id="copies" min="1" value="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="binding">Binding Option</label>
+                        <select id="binding">
+                            <option value="none">None</option>
+                            <option value="staple">Staple (+€0.50)</option>
+                            <option value="spiral">Spiral (+€2.00)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deliveryZone">Delivery Zone</label>
+                        <select id="deliveryZone">
+                            <option value="nicosia">Nicosia city - €1.50</option>
+                            <option value="nearby">Nearby zone - €2.50</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deliverySpeed">Delivery Speed</label>
+                        <select id="deliverySpeed">
+                            <option value="standard">Standard (24-48 hours)</option>
+                            <option value="express">Express (+€3.00 - Same day)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="price-summary">
+                    <h3>Order Summary</h3>
+                    <div class="price-row">
+                        <span>Printing Cost:</span>
+                        <span id="printingCost">€0.00</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Binding:</span>
+                        <span id="bindingCost">€0.00</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Delivery:</span>
+                        <span id="deliveryCost">€0.00</span>
+                    </div>
+                    <div class="total-price">
+                        <span>Total:</span>
+                        <span id="totalCost">€0.00</span>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 2rem;">
+                    <h3>Payment Method</h3>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="radio" name="payment" value="online" checked style="margin-right: 0.5rem;">
+                            Secure Online Payment
+                        </label>
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="radio" name="payment" value="cod" style="margin-right: 0.5rem;">
+                            Cash on Delivery
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1.5rem;">Order Now</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Extreme Printing?</h2>
+                <p>We make printing simple, fast, and reliable with our premium services</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Fast Delivery</h3>
+                    <p>Get your prints delivered within 24-48 hours or choose our same-day express option for urgent
+                        needs.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3>Competitive Pricing</h3>
+                    <p>High quality printing at affordable prices with transparent pricing and no hidden fees.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure Printing</h3>
+                    <p>Your documents are safe with us. We use secure servers and delete files after printing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied customers</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>I've used this service for all my university papers and it's been incredibly reliable. The
+                            quality is always perfect and delivery is faster than promised!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma D.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Emma D.</h4>
+                            <p>Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>Highly recommend! We use them for all our office printing needs. The quality and speed of
+                            service is exceptional. They've saved us so much time and hassle.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John S.">
+                        </div>
+                        <div class="author-info">
+                            <h4>John S.</h4>
+                            <p>Office Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>As a small business owner, this service has been a game-changer. I can focus on my work while
+                            they handle all my printing needs with perfect results every time.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Maria K.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Maria K.</h4>
+                            <p>Small Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our printing service</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Which file types do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all common file formats including PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX, JPG, PNG,
+                            and TIFF. If you have a special file format, please contact us and we'll do our best to
+                            accommodate.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How much is delivery?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard delivery within Nicosia city is €1.50, while nearby zones are €2.50. We also offer
+                            express same-day delivery for an additional €3.00. Delivery fees are calculated
+                            automatically when you place your order.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is my document information secure?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We use secure servers with encryption to protect your files. All documents are
+                            automatically deleted from our systems after printing and delivery is complete. We never
+                            share or store your files beyond what's necessary to fulfill your order.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What's your turnaround time?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most orders are printed and delivered within 24-48 hours. For urgent needs, we offer same-day
+                            express delivery when ordered before 12pm. Large volume orders may take slightly longer -
+                            we'll notify you if this is the case.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="justify-content: center; margin-bottom: 1rem;">
+                EXTREME<span>PRINTING</span>SERVICE
+            </div>
+            <p>Print from anywhere in Nicosia. Delivered to your door.</p>
+
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Upload & Print</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <p>&copy; 2023 Extreme Printing Service. All rights reserved.</p>
+        </div>
+    </footer>
+
+   <script src="app.js"></script>
+</body>
+
+</html>
